@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gsgana.gsledger.viewmodels.HomeViewPagerViewModel" />
+
+        <variable
+            name="callback"
+            type="com.gsgana.gsledger.ListFragment.Callback" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="3dp"
+            android:gravity="right">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:text="@string/slot"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:text=":"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/getNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:textSize="@dimen/text_medium" />
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="1dp"-->
+<!--                android:text="/"-->
+<!--                android:textSize="@dimen/text_medium" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/maxItemNo"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="1dp"-->
+<!--                android:text="18"-->
+<!--                android:textSize="@dimen/text_medium" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_List"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/add_list"
+            android:layout_below="@id/topLayout"
+            android:layout_marginBottom="1dp"
+            android:paddingTop="6dp"
+            android:orientation="horizontal"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="1dp"
+            android:clipToPadding="false"
+            android:paddingTop="6dp"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:spanCount="1"
+            tools:listitem="@layout/list_item_product"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/write_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:src="@drawable/add_button"
+            app:backgroundTint="@color/green"
+            app:fabSize="normal" />
+
+        <!--        </LinearLayout>-->
+    </RelativeLayout>
+
+
+</layout>

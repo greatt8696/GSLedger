@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.gsgana.gsledger.data.Product" />
+
+        <import type="com.gsgana.gsledger.utilities.ConstantsKt" />
+
+        <variable
+            name="viewModel"
+            type="com.gsgana.gsledger.viewmodels.DetailViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.18">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.18"
+                android:orientation="vertical"
+                android:gravity="top"
+                android:spinnerMode="dropdown">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout2r"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:clickable="true"
+                            android:background="@drawable/ic_arrow_back_black_24dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="Page 2/6"
+                        android:textAlignment="center"
+                        android:textSize="29sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:paddingStart="8dp"
+                    android:text="@string/Product"
+                    android:textSize="24sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/brand_image"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginBottom="24dp" />
+
+                <Spinner
+                    android:id="@+id/brand_spn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="24dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/moveTo2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:background="@color/mu1_data_up"
+                android:theme="@style/NextButton" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

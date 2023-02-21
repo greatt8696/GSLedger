@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/font_silver</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="floatingButton" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:paddingLeft">@dimen/mtrl_btn_icon_btn_padding_left</item>
+
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NextButton" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">@color/green</item>
+        <item name="colorControlHighlight">@color/mu1_data_up</item>
+    </style>
+
+    <style name="DeleteButton" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">@color/mu1_data_down</item>
+        <item name="colorControlHighlight">@color/red</item>
+    </style>
+
+</resources>
